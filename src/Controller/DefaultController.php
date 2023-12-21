@@ -9,6 +9,6 @@ class DefaultController extends AbstractController
 {
     #[Route('/home/')] // on définit la route / (donc route par défaut de tout le site) pour cette fonction home
     public function home(): Response {
-        return new Response('Hello Quentin Guilha'); // on ne fait qu'afficher son prénom et nom de famille
+        return new Response('Hello Guinle Loic'); // on ne fait qu'afficher son prénom et nom de famille
     }   
 }
