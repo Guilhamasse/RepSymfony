@@ -50,19 +50,19 @@ class BlogController extends AbstractController
         return $this->render('blog/single.html.twig', ['article' => $article, 'categories' => $categories]);
     }
 
-    // #[Route('/blog/category/{slug}', name: 'app_articles_by_category')]
-    // public function cateById(CategoryRepository $repoCate, string $slug): Response
-    // {
-    //     $category = $repoCate->findOneBySlug($slug);
-    //     $categories = $repoCate->findAll();
-    //     $articles = [];
-    //     if (isset($category)) {
-    //         $articles = $category->getArticles();
-    //     }
-    //     return $this->render('blog/articles_by_categories.html.twig', [
-    //         'category' => $category,
-    //         'categories' => $categories,
-    //         'articles' => $articles
-    //     ]);
-    // }
+    #[Route('/blog/category/{slug}', name: 'app_articles_by_category')]
+    public function cateById(CategoryRepository $repoCate, string $slug): Response
+    {
+        $category = $repoCate->findOneBySlug($slug);
+        $categories = $repoCate->findAll();
+        $articles = [];
+        if (isset($category)) {
+            $articles = $category->getArticles();
+        }
+        return $this->render('blog/articles_by_categories.html.twig', [
+            'category' => $category,
+            'categories' => $categories,
+            'articles' => $articles
+        ]);
+    }
 }
