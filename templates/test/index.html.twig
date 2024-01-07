@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="../_assets/css/style.css">
+	</head>
+	<body>
+		<h1>{{title | title }}</h1>
+		<ul>
+			{% for user in users %}
+				{% if user.age > 18 %}
+					<li>{{ user.name }}
+						a
+						{{ user.age}}
+						ans donc cette personne est majeur
+					</li>
+				{% elseif user.age > 6 %}
+					<li>{{ user.name }}
+						a
+						{{ user.age}}
+						ans donc cette personne est mineur
+					</li>
+				{% else %}
+					<li>{{ user.name }}
+						a
+						{{ user.age}}
+						ans donc cette personne est un enfant
+					</li>
+
+				{% endif %}
+			{% endfor %}
+		</ul>
+		<script src="../_assets/js/main.js"></script>
+	</body>
+</html></body></html>

@@ -1,0 +1,47 @@
+.single-chanson{
+    display: flex;
+    justify-content: space-evenly;
+}
+.chanson-image img{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 13px #ccc;
+    border-radius: 15px;
+    border: 5px solid var(--main-color);
+}
+.single-chanson .chanson-details{
+    padding: 20px 0;
+    gap: 10px;
+
+}
+/* Styles pour le bouton Retour à la liste */
+.button-retour {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #3498db; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte du bouton */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease; /* Animation de transition pour la couleur de fond */
+}
+
+.button-retour:hover {
+  background-color: #2980b9; /* Couleur de fond du bouton au survol */
+}
+
+.nom-artiste{
+  display: inline-block;
+  padding: 10px 10px;
+  text-decoration: none;
+  background-color: #9AACC0; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte du bouton */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease; /* Animation de transition pour la couleur de fond */
+}
+.nom-artiste:hover{
+    background-color: #7E8D9E;
+}
+

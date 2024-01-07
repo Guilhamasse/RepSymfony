@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="single-chanson">
+    <div class="chanson-image">
+		<img src={{ artiste.photo }}
+         alt="Image de l'artiste : {{ artiste.nom }}">
+	</div>  
+
+    <div class="content-chanson">
+	    <h3>Nom : </h3>
+        <p>{{artiste.nom}}</p>
+        <h3>Prenom : </h3>
+        <p>{{ artiste.prenom }}</p>
+        <h3>Date de naissance : </h3>
+        <p>{{artiste.dateNaissance ? artiste.dateNaissance|date('Y-m-d') : ''}}</p>
+        <h3>Lieu de naissance : </h3>
+        <p>{{artiste.lieuNaissance}}</p>
+        <h3>Description : </h3>
+        <p>{{artiste.description}}</p>
+        <h3>Chansons de l'artiste : </h3>
+        <p>{% for chanson in artiste.chansons%}
+                <a href="{{ path('app_single_chanson' , {'id' : chanson.id}) }}">{{chanson.titre}}<br><br></a>
+
+            {% endfor%}
+        </p>
+    </div>
+</div>
+{% endblock %}
