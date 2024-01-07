@@ -48,10 +48,11 @@ final class ChansonFactory extends ModelFactory
     {
         return [
             'dateSortie' => self::faker()->dateTime(),
-            'genre' => self::faker()->text(255),
-            'langue' => self::faker()->text(255),
-            'photoCouverture' => self::faker()->text(255),
-            'titre' => self::faker()->title(),
+            'genre' => self::faker()->text(15),
+            'langue' => self::faker()->country(),
+            //'photoCouverture' => self::faker()->text(255),
+            'photoCouverture' => "https://picsum.photos/360/360?image=" . (self::faker()->numberBetween(300, 600)),
+            'titre' => self::faker()->sentence(),
         ];
     }
 

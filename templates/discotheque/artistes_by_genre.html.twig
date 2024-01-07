@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="title-type">
+	<h2>{{type.type}}</h2>
+</div>
+{# <p>({{chansons | length}}
+				chansons au total dans
+				{{type.type}})</p> #}
+<div class="articles">
+		
+		{% for artiste in artistes %}
+			{# <a href="{{ path('app_single_article' , {'slug' : article.slug}) }}" class="article-item"> #}
+			<a href="{{ path('app_single_artiste' , {'id' : artiste.id}) }}" class="article-item">
+			{# <div class="article-item"> #}
+				<div class="article-image">
+					<img src={{ artiste.photo }} width="150" height="150">
+				</div>
+				<div class="article-details flex">
+					<div class="article-author-details">
+						<div class="article-content-details">
+							<h2 class="article-title">
+								{{artiste.nom}}</h2>
+                            <h2>{{artiste.prenom}}</h2>
+							
+						</div>
+
+					</div>
+				</div>
+			{# </div> #}
+			</a>
+			{# </a> #}
+
+
+		{% endfor %}
+
+	</div>
+{% endblock %}

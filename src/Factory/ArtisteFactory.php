@@ -51,7 +51,7 @@ final class ArtisteFactory extends ModelFactory
             'description' => self::faker()->text(255),
             'lieuNaissance' => self::faker()->text(255),
             'nom' => self::faker()->lastName(),
-            'photo' => self::faker()->text(255),
+            'photo' => "https://picsum.photos/360/360?image=" . (self::faker()->numberBetween(300, 600)),
             'prenom' => self::faker()->name(),
         ];
     }

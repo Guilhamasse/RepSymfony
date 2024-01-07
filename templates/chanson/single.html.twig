@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="single-chanson">
+    <div class="chanson-image">
+		<img src={{ chanson.photoCouverture }}
+         alt="Image de la chanson : {{ chanson.titre }}"><br><br>
+         <a class="button-retour" href="{{ path('app_discotheque') }}">Retour à la liste</a>
+	</div>
+
+    <div class="content-chanson">
+	    <h3>Titre : </h3>
+        <p>{{chanson.titre}}</p>
+        <h3>Genre : </h3>
+        <p>{{ chanson.genre }}</p>
+        <h3>Langue : </h3>
+        <p>{{ chanson.langue }}</p>
+        <h3>Date de sortie : </h3>
+        <p>{{chanson.dateSortie ? chanson.dateSortie|date('Y-m-d') : ''}}</p>
+        <h3>Artistes : </h3>
+        <p>{% for artiste in chanson.artiste%}
+            <a href="{{ path('app_single_artiste' , {'id' : artiste.id}) }}" class="nom-artiste"> {{artiste.nom}}<br></a>
+               
+            {% endfor%}
+        </p>
+    </div>
+</div>
+{% endblock %}

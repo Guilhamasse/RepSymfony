@@ -3,3 +3,56 @@
 @import url("components/single.css");
 @import url("components/header.css");
 @import url("components/home.css");
+@import url("components/single-chanson.css");
+@import url("components/typeArtiste.css");
+
+.button-delete {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #CF1A1A; /* Couleur de fond du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Animation de transition pour la couleur de fond */
+    border: 0px;
+  }
+  
+  .button-delete:hover {
+    background-color: #931212; /* Couleur de fond du bouton au survol */
+  }
+
+  .button-edit {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #D9E13F; /* Couleur de fond du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Animation de transition pour la couleur de fond */
+    border: 0px;
+  }
+  
+  .button-edit:hover {
+    background-color: #B1B833; /* Couleur de fond du bouton au survol */
+  }
+
+  .button-create {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #33B83B; /* Couleur de fond du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Animation de transition pour la couleur de fond */
+    border: 0px;
+    margin-bottom: 20px;
+  }
+  
+  .button-create:hover {
+    background-color: #268B2C; /* Couleur de fond du bouton au survol */
+  }
+
+  .butt-edit-delete{
+    display: flex;
+    gap: 1rem;
+  }

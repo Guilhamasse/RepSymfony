@@ -43,6 +43,22 @@
 							{% endfor %}
 						</ul>
 					</li>
+					<li class="nav-item down">
+						<a href="">Genres</a>
+						<ul class="nav-bar">
+								{# <li class="nav-item"><a href="">Category 1</a></li>
+								<li class="nav-item"><a href="">Category 2</a></li>
+								<li class="nav-item"><a href="">Category 3</a></li> #}
+							{% for type in typeRepository.findAll() %}
+								<li class="nav-item">
+									<a href="{{ path('app_artistes_by_genre',{'id':type.id})}}">{{type.type}}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="{{ path('app_discotheque') }}">Discotheque</a>	
+					</li>
 				</li>
 				<li class="nav-item">Contact</li>
 			</ul>
